@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var app = express();
 
-mongoose.connect("mongodb://localhost/User", { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://admindb:admindatabase@cluster0-vlwic.mongodb.net/test", { useNewUrlParser: true, useUnifiedTopology: true});
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine","ejs");
