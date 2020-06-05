@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Mongoose</title>
+</head>
+<body>
+    <h3>USERS:</h3><br>
+    <% users.forEach(function(user){ %>
+        <div>
+            <p>
+                <%= user.name %>
+            </p>
+            <p>
+                <%= user.email %>
+            </p>
+            <p>
+                <%= user.phone %>
+            </p>
+            <p>
+                <%= user.details %>
+            </p>
+            <hr>
+        </div>
+      
+       <% }) %>
+    <h3>Posting</h3>
+    <form action="/posting" method="POST">
+        <div>
+            <label style="padding-right: 35px;">Name</label>
+            <input type="text" placeholder="Username" name="user[name]">
+        </div>
+        <br>
+        <div>
+            <label style="padding-right: 35px;">Email</label>
+            <input type="email" placeholder="Email" name="user[email]">
+        </div>
+        <br>
+        <div>
+            <label style="padding-right: 35px;">Phone</label>
+            <input type="text" placeholder="Username" name="user[phone]">
+        </div>
+        <br>
+        <div>
+            <label style="padding-right: 35px;">Details</label>
+            <input type="text" placeholder="Username" name="user[details]">
+        </div>
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+    <br>
+    <h3>Deleting</h3>
+    <form action="/deleting" method="POST">
+        <div>
+            <label style="padding-right: 35px;">Name</label>
+            <input type="text" placeholder="Username" name="user[name]">
+        </div>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>
