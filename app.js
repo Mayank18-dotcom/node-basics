@@ -23,11 +23,7 @@ var newSchema = new Schema({
 })
 
 var User = mongoose.model("User",newSchema);
-app.get('/',(err,res)=>{
-        res.redirect('/getting');
-})
-
-app.get('/getting',(req,res)=>{
+app.get('/',(req,res)=>{
     User.find({},(err,result)=>{
         if(err) res.json(err)
         else{
